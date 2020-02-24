@@ -23,7 +23,7 @@ class Wp_Scss_Settings
         // This page will be under "Settings"
         add_options_page(
             'Settings Admin', 
-            'WP-SCSS', 
+            'WP-SCSSe', 
             'manage_options', 
             'wpscss_options', 
             array( $this, 'create_admin_page' )
@@ -39,13 +39,13 @@ class Wp_Scss_Settings
         $this->options = get_option( 'wpscss_options' );
         ?>
         <div class="wrap">
-            <h2>WP-SCSS Settings</h2>   
+            <h2>WP-SCSSe Settings</h2>   
             <p>
               <span class="version">Version <em><?php echo get_option('wpscss_version'); ?></em>
               <br/>
-              <span class="author">By: <a href="http://connectthink.com" target="_blank">Connect Think</a></span>
+              <span class="author">Original By: <a href="http://connectthink.com" target="_blank">Connect Think</a></span>
               <br/>
-              <span class="repo">Help & Issues: <a href="https://github.com/ConnectThink/WP-SCSS" target="_blank">Github</a></span>
+              <span class="repo">Help & Issues: <a href="https://github.com/XNBlank/WP-SCSS" target="_blank">Github</a></span>
             </p>        
             <form method="post" action="options.php">
             <?php
@@ -76,7 +76,7 @@ class Wp_Scss_Settings
             'Configure Paths',                  // Title
             array( $this, 'print_paths_info' ), // Callback
             'wpscss_options'                    // Page
-        );  
+        );
 
         add_settings_field(
             'wpscss_scss_dir',                     // ID
